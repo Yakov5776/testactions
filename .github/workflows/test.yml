@@ -15,7 +15,7 @@ jobs:
     name: Test action
 
     steps:
-    - uses: kevin-david/zipalign-sign-android-release@v2.0.0
+    - uses: Yakov5776/zipalign-sign-android-release@ncc-migration
       name: Sign app APK
       id: sign_app
       with:
