@@ -1,0 +1,27 @@
+name: "Test"
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    name: Test action
+
+    steps:
+    - uses: kevin-david/zipalign-sign-android-release@v2
+      name: Sign app APK
+      id: sign_app
+      with:
+        releaseDirectory: app/build/outputs/apk/release
+        signingKeyBase64: ''
+        alias: ''
+        keyStorePassword: ''
+        keyPassword: ''
+        zipAlign: true
